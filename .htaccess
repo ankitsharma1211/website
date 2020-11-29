@@ -1,0 +1,21 @@
+#DON'T SHOW DIRECTORY LISTINGS
+Options -Indexes
+
+#FOLLOW SYMBOLIC LINKS
+Options +FollowSymLinks
+
+#SET DEFAULT HANDLER
+DirectoryIndex index.php index.html index.htm
+
+RewriteEngine on
+
+#WWW REWRITE
+RewriteCond %{HTTP_HOST} ^https://ceedmy.herokuapp.com/$ [NC]
+RewriteRule ^(.*)$ http://https://ceedmy.herokuapp.com//$1 [L,R=301]
+
+#REDIRECT OLD PAGE
+RewriteCond %{HTTP_HOST} ^https://ceedmy.herokuapp.com/$
+RewriteRule ^old-page.html$ http://www.example.com/new-page [R=301,L]
+
+#ERROR 404 PAGE
+ErrorDocument 404 /404.html
