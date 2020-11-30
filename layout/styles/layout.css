@@ -367,11 +367,11 @@ table a, #comments a{background-color:inherit;}
 /* Mobile Devices
 --------------------------------------------------------------------------------------------------------------- */
 @media screen and (max-width:978px){
-	.hoc{max-width:90%;}
+	.hoc{max-width:100%;}
 
 	#header{}
 
-	#mainav{width:80%; padding:15px 0 0 0;}
+	#mainav{width:100%; padding:15px 0 0 0;}
 	#mainav ul{display:none;}
 	#mainav form{display:block;}
 
